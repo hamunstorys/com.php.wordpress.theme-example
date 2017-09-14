@@ -9,7 +9,12 @@
 <body <?php body_class(); ?>>
 <div id="container">
     <div id="header">
-        <h1>Site Title</h1>
+        <h1>
+            <a href="<?php echo home_url(); ?>">
+				<?php bloginfo( 'name' ); ?>
+            </a>
+        </h1>
+        <p><?php bloginfo( 'description' ); ?></p>
     </div>
     <div id="main">
         <div id="content">

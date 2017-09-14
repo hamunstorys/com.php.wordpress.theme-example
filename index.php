@@ -25,14 +25,15 @@
                         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                     </h2>
                     <p>
-						<?php echo get_the_date(); ?> <?php echo get_the_time(); ?> | Category : <?php the_category( ', ' ); ?>
+						<?php echo get_the_date(); ?> <?php echo get_the_time(); ?> | Category
+                        : <?php the_category( ', ' ); ?>
                     </p>
 					<?php if ( is_home() || is_category() || is_tag() ) {
-                        if ( has_post_thumbnail() ) {
+						if ( has_post_thumbnail() ) {
 							the_post_thumbnail( array( 100, 100 ), array(
 								'class' => 'jb-thumbnail',
-							));
-                        }
+							) );
+						}
 						the_excerpt();
 					} else {
 						the_content();
@@ -44,12 +45,14 @@
         </div>
         <div id="sidebar">
             <h2>Menu</h2>
-	        <?php
-	        wp_nav_menu( array(
-		        'theme_location' => 'main_menu',
-		        'fallback_cb' => false,
-	        ));
-	        ?>
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'main_menu',
+				'fallback_cb'    => false,
+			) );
+			?>
+			<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( "Right Sidebar" ) ) : ?>
+			<?php endif; ?>
         </div>
     </div>
     <div id="footer">

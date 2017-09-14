@@ -14,4 +14,7 @@ register_sidebar( array(
 	'after_widget'  => '</div>',
 ) );
 
+
+add_theme_support( 'post-formats', array( 'image', 'quote' ) );
+
 ?>

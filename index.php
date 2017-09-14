@@ -22,12 +22,6 @@
 		<?php endwhile; else: ?>
             <h2>Sorry!</h2>
 		<?php endif; ?>
-	    <?php
-	    wp_nav_menu( array(
-		    'theme_location' => 'main_menu',
-		    'fallback_cb'    => false,
-	    ) );
-	    ?>
     </div>
 	<?php get_sidebar(); ?>
 </div>

@@ -37,3 +37,9 @@
 .jb-post-list {
     clear: both;
 }
+
+.jb-format-quote blockquote {
+    color: #28b779;
+    font-family: Georgia;
+    font-style: italic;
+}

@@ -22,6 +22,15 @@
                 <h2>
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h2>
+                <p>
+					<?php echo get_the_date(); ?> <?php echo get_the_time(); ?>
+                    | Category : <?php the_category( ', ' ); ?>
+                </p>
+				<?php if ( is_home() || is_category() || is_tag() ) {
+					the_excerpt();
+				} else {
+					the_content();
+				} ?>
 			<?php endwhile; else: ?>
                 <h2>Sorry!</h2>
 			<?php endif; ?>

@@ -28,3 +28,12 @@
     width: 300px;
     float: right;
 }
+
+.jb-thumbnail {
+    float: left;
+    margin: 0px 10px 10px 0px;
+}
+
+.jb-post-list {
+    clear: both;
+}
